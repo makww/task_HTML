@@ -1,0 +1,39 @@
+// main: ../style.less
+
+.bank-btn {
+    .btn_size;
+    .btn;
+    display: inline-block;
+    color: @white;
+    border-radius: @radius;
+    font-size: @b-size-font;
+    transition: .1s linear;
+
+    & + & {
+        margin-left: 4px;
+    }
+}
+
+.ok-btn {
+    .btn_size(457px);
+    .btn;
+    display: inline-block;
+    color: @white;
+    border-radius: @radius;
+    font-size: @b-size-font;
+    transition: .2s linear;
+}
+
+.info-btn {
+    .btn_size(48px, 48px);
+    min-width: 48px;
+    .btn;
+    display: inline-block;
+    color: @white;
+    border-radius: @circle;
+    font-size: 40px;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    font-style: italic;
+    transition: .2s linear;
+}

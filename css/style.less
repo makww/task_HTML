@@ -1,0 +1,33 @@
+// compress: false, sourceMap: true
+
+@import "vars";
+@import "mixins";
+
+html{
+    font-size: 15px;
+}
+
+body {
+    margin: 0;
+    font-family: @main-font;
+    color: @white;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
+
+// Blocks
+@import "blocks/popup";
+@import "blocks/inputs";
+@import "blocks/entrance-fee/entrance-fee";
+@import 'blocks/entrance-fee/title';
+@import "blocks/type-of-game";
+@import "blocks/btn";
+@import "blocks/grid";
+@import "blocks/add-settings/add-settings";
+@import "blocks/add-settings/add-settings__param";
+@import "action-buttons.less";

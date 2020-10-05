@@ -1,0 +1,23 @@
+// main: style.less
+
+.btn() {
+    background-image: -moz-linear-gradient( -90deg, #373737 0%, #212121 100%);
+    background-image: -webkit-linear-gradient( -90deg, #373737 0%, #212121 100%);
+    background-image: -ms-linear-gradient( -90deg, #373737 0%, #212121 100%);
+    box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.4), inset 0px 2px 0px 0px rgba(255, 255, 255, 0.14);
+
+    &:active {
+        background-image: -moz-linear-gradient( -90deg, #212121 0%, #373737 100%);
+        background-image: -webkit-linear-gradient( -90deg, #212121 0%, #373737 100%);
+        background-image: -ms-linear-gradient( -90deg, #212121 0%, #373737 100%);
+        box-shadow: inset 0px 3px 2px 0px rgba(0, 0, 0, 0.4), 0px 2px 0px 0px rgba(255, 255, 255, 0.14);
+    }
+}
+
+.btn_size(@width: 109px, @height: 51px) {
+    width: @width;
+    height: @height;
+}
+
+
+

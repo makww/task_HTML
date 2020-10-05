@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup</title>
+</head>
+
+<body>
+
+    <div class="popup">
+
+        <div class="entrance-fee">
+
+            <h1 class="title">Входной взнос</h1>
+            <div class="type-of-game">
+                <div class="type-of-game__logo">
+                    <img src="img/chip.png" alt="chip">
+                </div>
+                <div class="type-of-game__info">
+                    <p>5/10</p>
+                    <p>ФЛ Холдем</p>
+                </div>
+            </div>
+
+            <form class="bank" onsubmit="return false">
+                <p>Доступно средств: <span id="available">2609</span></p>
+                <div class="bank-inputs">
+                    <input class="bank__input-field" type="text" id="input-field" value="0">
+                    <div class="bank__input-slider-content">
+                        <input class="bank__input-slider" type="range" min="0" max="100" step="1" id="amount"  oninput="chipsAmount()" value="0">
+                    </div>
+                </div>
+
+                <div>
+                    <button class="bank-btn" onclick="min()">Min</button>
+                    <button class="bank-btn" onclick="max()">Max</button>
+                    <button class="bank-btn" onclick="bank()">Bank</button>
+                    <button class="bank-btn" onclick="halfBank()">1/2 Bank</button>
+                </div>
+
+                <p class="info-text">Ваш входной взнос не может быть меньше суммы с которой вы покинули данный стол.<br>
+                   Нажмите кнопку ОК, чтобы продолжить, или подождите, когда пройдёт время ограничения.
+                </p>
+                <button class="ok-btn">Быстрая посадка и автодокупка >></button>
+            </form>
+
+
+            <div class="container">
+            </div>
+
+        </div>
+
+
+
+        <div class="add-settings">
+
+            <div class="add-settings__param">
+                <div class="param__checkbox">
+                    <input type="checkbox" id="check1">
+                    <label for="check1"></label>
+                    <p>Быстрая посадка</p>
+                    <button class="info-btn">i</button>
+                </div>
+                <div class="param_text-field">
+                    <p>Автоматически ставить на стол:</p>
+                    <input type="text" class="add-settings__input-field">
+                </div>
+            </div>
+
+            <div class="add-settings__param">
+                <div class="param__checkbox">
+                    <input type="checkbox" id="check2">
+                    <label for="check2"></label>
+                    <p>Автодокупка</p>
+                    <button class="info-btn">i</button>
+                </div>
+                <p class="info-text">Я хочу пользоваться функцией автоматической докупки и пониматю, 
+                    что она будет автоматически пополнять мой счет для обеспечения 
+                    заданого номера стека.</p>
+                <div class="param_text-field">
+                    <p>Если у меня меньше:</p>
+                    <input type="text" class="add-settings__input-field">
+                </div>
+                <div class="param_text-field">
+                    <p>Автоматически докупать до:</p>
+                    <input type="text" class="add-settings__input-field">
+                </div>
+            </div>
+
+            <div class="add-settings__param">
+                <div class="param__checkbox">
+                    <input type="checkbox" id="check3">
+                    <label for="check3"></label>
+                    <p class="info-text">Сохранить настройки после выхода из приложения</p>
+                    <button class="info-btn">i</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="action-buttons">
+            <button class="bank-btn" onclick="">Ok</button>
+            <button class="bank-btn" onclick="">Cashier</button>
+            <button class="bank-btn" onclick="">Cancel</button>
+        </div>
+
+    </div>
+
+
+    <script type="text/javascript" src="js/script.js"></script>
+
+</body>
+
+</html>
