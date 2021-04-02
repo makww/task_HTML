@@ -11,7 +11,7 @@
 
 <body>
 
-    <div class="popup">
+    <form class="popup">
 
         <div class="entrance-fee">
 
@@ -26,30 +26,26 @@
                 </div>
             </div>
 
-            <form class="bank" onsubmit="return false">
+            <div class="bank">
                 <p>Доступно средств: <span id="available">2609</span></p>
                 <div class="bank-inputs">
                     <input class="bank__input-field" type="text" id="input-field" value="0">
                     <div class="bank__input-slider-content">
-                        <input class="bank__input-slider" type="range" min="0" max="100" step="1" id="amount"  oninput="chipsAmount()" value="0">
+                        <input class="bank__input-slider" type="range" min="0" max="100" step="1" id="amount" value="0">
                     </div>
                 </div>
 
                 <div>
-                    <button class="bank-btn" onclick="min()">Min</button>
-                    <button class="bank-btn" onclick="max()">Max</button>
-                    <button class="bank-btn" onclick="bank()">Bank</button>
-                    <button class="bank-btn" onclick="halfBank()">1/2 Bank</button>
+                    <button class="bank-btn" id="min">Min</button>
+                    <button class="bank-btn" id="max">Max</button>
+                    <button class="bank-btn" id="bank">Bank</button>
+                    <button class="bank-btn" id="halfBank">1/2 Bank</button>
                 </div>
 
                 <p class="info-text">Ваш входной взнос не может быть меньше суммы с которой вы покинули данный стол.<br>
-                   Нажмите кнопку ОК, чтобы продолжить, или подождите, когда пройдёт время ограничения.
+                    Нажмите кнопку ОК, чтобы продолжить, или подождите, когда пройдёт время ограничения.
                 </p>
                 <button class="ok-btn">Быстрая посадка и автодокупка >></button>
-            </form>
-
-
-            <div class="container">
             </div>
 
         </div>
@@ -78,8 +74,8 @@
                     <p>Автодокупка</p>
                     <button class="info-btn">i</button>
                 </div>
-                <p class="info-text">Я хочу пользоваться функцией автоматической докупки и пониматю, 
-                    что она будет автоматически пополнять мой счет для обеспечения 
+                <p class="info-text">Я хочу пользоваться функцией автоматической докупки и пониматю,
+                    что она будет автоматически пополнять мой счет для обеспечения
                     заданого номера стека.</p>
                 <div class="param_text-field">
                     <p>Если у меня меньше:</p>
@@ -108,7 +104,7 @@
             <button class="bank-btn" onclick="">Cancel</button>
         </div>
 
-    </div>
+    </form>
 
 
     <script type="text/javascript" src="js/script.js"></script>
