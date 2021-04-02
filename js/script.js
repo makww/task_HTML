@@ -11,6 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
         inputField.value = amount.value;
     }
 
+    amount.addEventListener('input', () => {
+        chipsAmount();
+    });
+
     bank.addEventListener('click', (e) => {
         e.preventDefault();
         switch (e.target.id) {
