@@ -1,28 +1,36 @@
-var available = document.getElementById("available");
-var amount = document.getElementById("amount");
-var inputField = document.getElementById("input-field");
+document.addEventListener('DOMContentLoaded', () => {
 
-amount.max = available.textContent;
+    const available = document.querySelector("#available");
+    const amount = document.querySelector("#amount");
+    const bank = document.querySelector('.bank');
+    const inputField = bank.querySelector("#input-field");
 
-function chipsAmount() {
-    inputField.value = amount.value;
-}
+    amount.max = available.textContent;
 
-function min() {
-    amount.value = 1;
-    chipsAmount();
-}
+    function chipsAmount() {
+        inputField.value = amount.value;
+    }
 
-function max() {
-    amount.value = available.textContent;
-    chipsAmount();
-}
+    bank.addEventListener('click', (e) => {
+        e.preventDefault();
+        switch (e.target.id) {
+            case 'min':
+                amount.value = 1;
+                chipsAmount();
+                break;
+            case 'max':
+                amount.value = available.textContent;
+                chipsAmount();
+                break;
+            case 'bank':
+                amount.value = available.textContent;
+                chipsAmount();
+                break;
+            case 'halfBank':
+                amount.value = available.textContent / 2;
+                chipsAmount();
 
-function bank() {
-    amount.value = available.textContent;
-    chipsAmount();
-}
-function halfBank() {
-    amount.value = ~~(available.textContent / 2);
-    chipsAmount();
-}
+        }
+    });
+
+});
